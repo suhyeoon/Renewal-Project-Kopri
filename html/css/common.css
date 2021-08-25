@@ -1,0 +1,229 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+/* RESET-S */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, input, button,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {border-collapse: collapse;border-spacing: 0;}
+/* RESET-E */
+
+/* :::::::::: COMMON-S :::::::::: */
+body{font:400 16px/27px 'Noto Sans KR', 'Nanum Gothic', 'NanumSquare', 'Dotum', 'arial', sans-serif; letter-spacing: -0.5px;color: #555;
+}
+a{text-decoration: none;color: inherit}
+.hidden{width: 0;height: 0;overflow: hidden;
+    font-size: 0;line-height: 0;
+    position: absolute;left: -9999px;
+}
+.clearfix:after{content: "";display: block;clear: both}
+.inner{width: 1240px;margin: 0 auto;}
+.skip-nav a{width: 100%;height: 50px;display: block;
+    background-color: #f00;
+    text-align: center;line-height: 50px;color: #fff;
+    position: fixed;left: 0;top: -100px;z-index: 1000;
+}
+.skip-nav a:focus{top: 0;}
+/* :::::::::: COMMON-E :::::::::: */
+/*:::::::::: header-S ::::::::::*/
+#header{width: 100%;height: 120px;min-width: 1240px;
+    background-color: #091152; 
+    position: relative;        
+}
+#header .header-wrap{height: 120px;}
+/****** logo-S ******/
+#header #logo{float: left;width: 222px;height: 38px;margin: 41px 30px 0 0;}
+#logo a{height: 38px;display: block; 
+    background-image: url(../img/logo.png);
+    text-indent: -9999px;
+}
+/****** logo-E ******/
+
+/****** gnb-S ******/
+#header #gnb{float: left;height: 120px;}
+#gnb>ul{text-align: center;
+    position: relative;
+}
+#gnb>ul>li{float: left;width: 140px;}
+#gnb>ul>li>a{height: 60px;display: block;padding-top: 60px; 
+    font:700 20px/30px 'NanumSquare';color: #fff;
+    position: relative;
+}
+#gnb>ul>li>a:after{content: "";width: 0;height: 3px;
+    background-color: #f30;
+    position: absolute;left: 0;bottom: 0;
+    transition: all 0.5s;
+}
+#gnb dl{width: 200px;height: 190px;display: none;padding-top: 115px;
+    text-align: left;
+    position: absolute;left: -233px;top: 150px;z-index: 100;
+    background-repeat: no-repeat;background-position: 0 0;
+}
+#gnb>ul>li:nth-child(1) dl{background-image: url(../img/header-gnb-kopri.jpg);}
+#gnb>ul>li:nth-child(2) dl{background-image: url(../img/header-gnb-infra.jpg);}
+#gnb>ul>li:nth-child(3) dl{background-image: url(../img/header-gnb-project.jpg);}
+#gnb>ul>li:nth-child(4) dl{background-image: url(../img/header-gnb-program.jpg);}
+#gnb>ul>li:nth-child(5) dl{background-image: url(../img/header-gnb-notice.jpg);}
+#gnb>ul>li:nth-child(6) dl{background-image: url(../img/header-gnb-goverment.jpg);}
+#gnb dt{font-size: 19px;font-weight: 700;color: #666;line-height: 1.5;}
+#gnb dd{font-size: 14px;line-height: 1.5;}
+#gnb ul ul{display: none;padding: 30px 0 0 43px;
+    color: #444;text-align: left;
+    position: relative;z-index: 100;   
+}
+#gnb ul li:nth-child(2) ul{padding-left: 26px;}
+#gnb ul li:nth-child(6) ul{padding-left: 35px;}
+#gnb ul ul a{height: 30px;display: block;
+    font-size: 15px;color: #666;line-height: 30px;
+}
+#gnb:after{content: "";width: 100%;height: 250px;display: none;
+    background-color: #fff;
+    position: absolute;left: 0;top: 120px;z-index: 10;
+}
+#gnb>ul>li:hover>a:after{width: 100%;}
+#gnb>ul>li:hover dl{display: block;}
+#gnb:hover ul ul{display: block;}
+#gnb ul li:hover ul li a{color: #1b3897;}
+#gnb ul ul li:hover a{font-weight: bold;color: #1b3897;}
+#gnb:hover:after{display: block;}
+/****** gnb-E ******/
+
+/****** tnb-S ******/
+#header .tnb{float: right; width: 140px;}
+.tnb .tnb-eng{float: right;margin: 13px 0 23px 0;
+    font-size: 13px;font-weight: 200;
+}
+.tnb-eng a{float: left;margin-left: 8px;padding: 0 8px;
+    color: #8488a9;line-height: 22px;
+    border: 1px solid #666b93; 
+}
+.tnb .tnb-wrap{float: right;}
+.tnb-wrap .tnb-sch{float: left;margin-right: 40px;}
+.tnb-sch a{display: block;width: 29px;height: 60px;
+    text-indent: -9999px;
+    background: url(../img/header-tnb-search.png) no-repeat 0 0;
+}
+.tnb-sch .tnb-sch-bg{width: 100%;height: 130px;display: none;padding-top: 70px;
+    background-color: #fff;
+    position: absolute;left: 0;top: 120px;z-index: 10;
+}
+.tnb-sch-bg .tnb-sch-form{position: relative;}
+.tnb-sch-form fieldset{width: 860px;margin: 0 auto;}
+.tnb-sch-form label{width: 80px;height: 63px;display: inline-block;margin-right: 15px;vertical-align: middle;
+    background: url(../img/tnb-sch-tit.png) no-repeat 0 0;
+    text-indent: -9999px;
+}
+.tnb-sch-form input{width: 560px;height: 52px;padding: 0 30px;margin-right: 10px;
+    border: 4px solid #091152;
+}
+.tnb-sch-form .tnb-sch-btn{width: 120px;height: 60px;
+    background-color: #545454;
+    font:400 15px/1 'Nanum Gothic';color: #fff;
+    border: none;
+}
+.tnb-sch-form .tnb-sch-close{width: 76px;height: 76px;
+    background: url(../img/tnb-sch_close.png) no-repeat 0 0;background-color: #fff;
+    text-indent: -9999px;
+    position: absolute;right: 50px;top: -145px;
+}
+.tnb-wrap .tnb-sitemap{float: left;width: 33px;height: 26px;
+    background-image: url(../img/header-tnb-sitemap.png);
+    text-indent: -9999px;
+}
+/****** tnb-E ******/
+/*:::::::::: header-E ::::::::::*/
+
+/*:::::::::: footer-S ::::::::::*/
+#footer{width: 100%;height: 140px;padding-top:50px;min-width: 1240px;
+    background-color: #3d464f;
+}
+#footer .f-logo{float: left;width: 105px;height: 37px;margin:0 132px 103px 0;
+    background: url(../img/footer-logo.svg) no-repeat 0 0;
+    text-indent: -9999px;
+}
+#footer .f-menu{float: left;margin-bottom: 15px;
+    color: #9ea3a7;
+}
+.f-menu li{float: left;height: 20px;
+    line-height: 20px;
+}
+.f-menu li:nth-child(4){font-weight: 500;color: #ddd;}
+.f-menu li+li:before,
+.f-addr li+li:before{content:"";width: 1px;height: 12px;display: inline-block;margin: 0 15px;
+    background-color: #bebebe;
+}
+#footer .f-wrap{float: right;}
+.f-wrap .f-family{width: 210px;height: 45px;margin-bottom: 5px;
+    background-color: #2b353e;
+    position: relative;
+}
+.f-family p{padding: 0 40px 0 25px;
+    color: #fff;line-height: 45px;
+}
+.f-family p:after{content: "";width: 10px;height: 10px;
+    border-right: 1px solid #fff;border-bottom: 1px solid #fff;
+    transform: rotate(45deg);
+    position: absolute;right: 20px;top: 12px;
+}
+.f-family ul{height: 150px;display: none;padding: 10px 0;
+    background-color: #535b63;  
+    overflow-y: scroll;
+    position: absolute;left: 0;top: -170px;
+}
+.f-family li{float: left;width: 100%;}
+.f-family a{height: 30px;display: block;padding: 0 25px;
+    font-size: 14px;color: #fff;line-height: 30px;
+}
+.f-family:hover p:after{margin-top: 6px;
+    transform: rotate(-135deg);
+}
+.f-family:hover ul{display: block;}
+.f-family a:hover{background-color: #3d464f}
+.f-wrap .f-sns{float: right;}
+.f-sns li{float: left;
+    font-size: 30px;
+}
+.f-sns li+li{margin-left: 8px;}
+#footer .f-addr{float: left;
+    font:100 15px/25px 'Nanum Gothic';color: #9ea3a7;
+}
+.f-addr li{float: left;}
+/*:::::::::: footer-E ::::::::::*/
